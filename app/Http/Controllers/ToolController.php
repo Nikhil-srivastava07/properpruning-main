@@ -25,11 +25,12 @@ class ToolController extends Controller
             'address_line_1' => 'required',
             'city' => 'required',
             'state' => 'required',
-            'zip_code' => 'required',
+            'zip_code' =>'required',
             'country' => 'required',
             'date' => 'required',
             'time' => 'required',
             'description' => 'required',
+            'image' => 'required',
             'video_file_name' => 'required',
             'audio_file_name' => 'required',
           ]);
@@ -47,9 +48,15 @@ class ToolController extends Controller
     $pruning_request->date = $request->date;
     $pruning_request->time = $request->time;
     $pruning_request->description = $request->description;
+    $pruning_request->image = $request->image;
     $pruning_request->video_file_name = $request->video_file_name;
     $pruning_request->audio_file_name = $request->audio_file_name;
+    
 
+    if ($request->hasFile('image')) 
+    {
+        $pruning_request->image = $request->file('image')->store('pruning_requests');
+    }
 
     if ($request->hasFile('video_file_name')) 
     {

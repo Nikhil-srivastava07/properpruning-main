@@ -116,6 +116,13 @@
 					<span class="menu-title">Add Tool </span>
 				</a>
 				<!--end:Menu link-->
+
+				<!--begin:Menu link-->
+				<a class="menu-link" href="/zipcode" target="_blank">
+					<span class="menu-icon">{!! getIcon('rocket', 'fs-2') !!}</span>
+					<span class="menu-title">Zip Code </span>
+				</a>
+				<!--end:Menu link-->
 			</div>
 			<!--end:Menu item-->
 			<!--begin:Menu item-->

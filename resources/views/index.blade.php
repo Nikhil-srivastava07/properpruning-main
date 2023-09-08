@@ -531,6 +531,25 @@
                             <!--begin::Input group-->
                         <div class="row mb-6">
                                 <!--begin::Label-->
+                                <label class="col-lg-4 col-form-label required fw-semibold fs-6">Image </label>
+                                <!--end::Label-->
+
+                                 <!--begin::Col-->
+                                 <div class="col-lg-8 fv-row">
+                                    <input type="file" class="form-control-file" id="image" name="image">
+                                    @if($errors->has ('image'))
+                                        <span class="text-danger">{{ $errors->first('image') }} </span>
+                                    @endif
+                                    <div class="col-lg-8 fv-row fv-plugins-icon-container" value="{{old('image')}}">
+                                    <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
+                                </div>
+                                <!--end::Col-->
+                        </div>
+                        <!--end::Input group-->
+
+                            <!--begin::Input group-->
+                        <div class="row mb-6">
+                                <!--begin::Label-->
                                 <label class="col-lg-4 col-form-label required fw-semibold fs-6">Upload video </label>
                                 <!--end::Label-->
 
@@ -544,7 +563,7 @@
                                     <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div></div>
                                 </div>
                                 <!--end::Col-->
-                            </div>
+                        </div>
                         <!--end::Input group-->
 
                          <!--begin::Input group-->

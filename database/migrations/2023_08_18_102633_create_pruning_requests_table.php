@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('date', 255);
             $table->string('time', 255);
             $table->string('description');
+            $table->string('image')->nullable();
             $table->string('video_file_name')->nullable();
             $table->string('audio_file_name')->nullable();
             $table->timestamps();
